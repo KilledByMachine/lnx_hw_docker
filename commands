@@ -1,0 +1,6 @@
+# Create and run server container
+sudo docker run -it --network=my-bridge-network --name server --entrypoint "/scripts/server.sh" -v "$(pwd)/:/scripts/" netcat-server
+
+# Create and run client container
+sudo docker run -it --network=my-bridge-network --name client --entrypoint "/scripts/client.sh" -v "$(pwd)/:/scripts/" netcat-client
+
